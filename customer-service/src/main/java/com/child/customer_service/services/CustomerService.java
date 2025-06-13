@@ -33,7 +33,7 @@ public class CustomerService {
                 FraudCheckResponse.class,
                 customer.getId());
 
-            if(fraudResponse.isFraudster()){
+            if(fraudResponse != null && fraudResponse.isFraudster()){
                 throw new IllegalStateException("fraudster");
             }
         }else{
