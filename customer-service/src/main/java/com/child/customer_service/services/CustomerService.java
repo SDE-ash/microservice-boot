@@ -29,7 +29,7 @@ public class CustomerService {
 
         //check if the customer is fraud or not
         FraudCheckResponse fraudResponse = restTemplate.getForObject(
-                "http://localhost:8083/fraud-check/cust/{customerId}",
+                "http://fraud-service/fraud-check/cust/{customerId}",
                 FraudCheckResponse.class,
                 customer.getId());
 
